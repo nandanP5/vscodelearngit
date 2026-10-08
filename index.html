@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILDO Report Automation</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Roboto+Slab:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ILDO Report Automation</h1>
+            <p class="subtitle">Real-time Traffic Analysis & Mapping</p>
+        </header>
+
+        <nav class="section-tabs">
+            <button class="tab-btn active" data-section="ildo">ILDO</button>
+            <button class="tab-btn" data-section="iti">I to I</button>
+            <button class="tab-btn" data-section="dtd">D to D</button>
+        </nav>
+
+        <main class="content-container">
+            <!-- ILDO Section -->
+            <section id="ildo-section" class="content-section active">
+                <div class="upload-container">
+                    <h2>Current Status</h2>
+                    <div class="status-grid">
+                        <div id="clientStatus" class="status-box">
+                            <svg class="status-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
+                                </path>
+                            </svg>
+                            <span class="status-text">Client Data</span>
+                            <span class="status-label">Waiting...</span>
+                        </div>
+                        <div id="telcoStatus" class="status-box">
+                            <svg class="status-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 002-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                </path>
+                            </svg>
+                            <span class="status-text">Telco Data</span>
+                            <span class="status-label">Waiting...</span>
+                        </div>
+                        <div id="summaryStatus" class="status-box">
+                            <svg class="status-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                </path>
+                            </svg>
+                            <span class="status-text">Summary File</span>
+                            <span class="status-label">Waiting...</span>
+                        </div>
+                    </div>
+
+                    <button id="generateBtn" class="generate-btn">Refresh Report</button>
+                    <div id="errorMessage" class="error-message"></div>
+                    <div id="loadingMessage" class="loading-message"></div>
+                </div>
+
+                <div id="reportContainer" class="report-container">
+                    <h2>ILDO Summary Report</h2>
+                    <div class="table-wrapper">
+                        <table class="report-table">
+                            <thead>
+                                <tr>
+                                    <th>Customer</th>
+                                    <th>Sum of Submitted</th>
+                                    <th>Sum of Delivered</th>
+                                    <th>Del %</th>
+                                    <th>Delivered via Yulore</th>
+                                    <th>Delivered via Domestic</th>
+                                    <th>Discounting</th>
+                                    <th>mix %</th>
+                                </tr>
+                            </thead>
+                            <tbody id="reportBody">
+                                <!-- Data will be inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- I to I Placeholder -->
+            <section id="iti-section" class="content-section">
+                <div class="placeholder-section">
+                    <svg class="placeholder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                    </svg>
+                    <h2>I to I Report</h2>
+                    <p>International to International reporting module coming soon.</p>
+                </div>
+            </section>
+
+            <!-- D to D Placeholder -->
+            <section id="dtd-section" class="content-section">
+                <div class="placeholder-section">
+                    <svg class="placeholder-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    <h2>D to D Report</h2>
+                    <p>Domestic to Domestic reporting module coming soon.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Include application script -->
+    <script src="script.js?v=99"></script>
+</body>
+
+</html>

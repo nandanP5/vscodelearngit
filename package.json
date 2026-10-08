@@ -1,0 +1,22 @@
+{
+  "name": "ildo-report-automation",
+  "version": "1.0.0",
+  "description": "ILDO Report Automation with automatic file loading",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "excel",
+    "report",
+    "automation",
+    "ildo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "xlsx": "^0.18.5"
+  }
+}
